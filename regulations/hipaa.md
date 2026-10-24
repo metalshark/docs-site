@@ -10,8 +10,8 @@ This page lists SBS controls tagged for this regulation or framework. The mappin
 
 These entries are an index into the benchmark. The canonical control content remains on the benchmark pages.
 
-- Total tagged controls: **16**
-- Benchmark sections represented: **7**
+- Total tagged controls: **18**
+- Benchmark sections represented: **8**
 
 ## Controls By Benchmark Section
 
@@ -177,21 +177,21 @@ If the organization’s Salesforce does not provide at least 30 days of ApiTotal
 
 ## Search Security
 
-3 control(s) in this benchmark section.
+2 control(s) in this benchmark section.
 
-### SBS-SRCH-001: Audit and Prioritize FLS Protection Slots in the Search Index for Objects with Sensitive Custom Fields
+### SBS-SRCH-001: Protect Sensitive Custom Fields Within the Search Index FLS Limit
 
-Critical [Source page](/benchmark/search-security.html)
+<Badge type="danger" text="Critical" /> [Source page](/benchmark/search-security)
 
-**Control Statement:** For every object with more than 100 searchable custom fields, the organization must review and configure Search Manager to assign all 100 available FLS protection slots to the fields with the highest sensitivity classification.
+**Control Statement:** For every object with more than 100 searchable, non-picklist custom fields, no field classified as sensitive may be both included in the search index and absent from the Search Manager Protected list.
 
-**Why tagged:** Inference attacks via unprotected search index fields can expose ePHI to unauthorized users; access controls over ePHI must extend to the search layer.
+**Why tagged:** Access to ePHI must be limited to authorized users across every access path, including search matching.
 
-### SBS-SRCH-002: Prohibit SOSL `IN ALL FIELDS` Scope in System-Mode Apex Where Results Are Exposed to Restricted Users
+### SBS-SRCH-006: Include Einstein Search Query Storage in Data Processing Assessments
 
-High [Source page](/benchmark/search-security.html)
+<Badge type="tip" text="Moderate" /> [Source page](/benchmark/search-security)
 
-**Control Statement:** Apex classes that execute SOSL queries using the `IN ALL FIELDS` search group must not expose matched records to users whose field-level security would restrict one or more of the indexed fields being searched.
+**Control Statement:** Organizations using Einstein Search must record the storage location and retention of search query and Search Analytics data in their data processing inventory and assess it against applicable regulatory obligations, including HIPAA.
 
-**Why tagged:** System-mode SOSL bypasses access controls and can enable unauthorized access to ePHI through search matching; technical safeguards must address all access paths, including programmatic search.
+**Why tagged:** Search queries can contain PHI and are stored in a separate environment that Salesforce states may not be covered like the production environment.
 

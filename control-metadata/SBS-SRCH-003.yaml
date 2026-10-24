@@ -5,4 +5,4 @@ remediation:
   scope: org
 
 task:
-  title_template: "Validate FLS prerequisites for all active Search Manager filtering rules"
+  title_template: "Validate FLS prerequisites for all active Search Manager rules"

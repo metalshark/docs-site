@@ -5,4 +5,4 @@ remediation:
   scope: org
 
 task:
-  title_template: "Audit and configure Search Manager FLS protection slots for objects with more than 100 searchable custom fields"
+  title_template: "Protect sensitive custom fields in the search index on objects with more than 100 searchable custom fields"

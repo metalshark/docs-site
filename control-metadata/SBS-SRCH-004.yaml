@@ -1,5 +1,5 @@
 control_id: SBS-SRCH-004
-risk_level: High
+risk_level: Critical
 
 remediation:
   scope: entity

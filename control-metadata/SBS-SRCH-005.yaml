@@ -1,8 +1,8 @@
 control_id: SBS-SRCH-005
-risk_level: High
+risk_level: Critical
 
 remediation:
   scope: org
 
 task:
-  title_template: "Enforce data category visibility as the primary access control for Knowledge article discoverability"
+  title_template: "Restrict Knowledge article discoverability through article-level access controls"
